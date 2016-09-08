@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
-@import 'bootstrap-sprockets';
-@import 'bootstrap';
-@import 'font-awesome';
+
+@import "bootstrap-sprockets";
+@import "bootswatch/sandstone/variables";
+@import "bootstrap";
+@import "bootswatch/sandstone/bootswatch";
+@import "font-awesome";
+@import "base";

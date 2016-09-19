@@ -1,0 +1,16 @@
+#navigation {
+  .navbar-header {
+    a.navbar-brand {
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: 3.5px;
+      span {
+        font-weight: 300;
+        letter-spacing: normal;
+      }
+      &:hover, &:active {
+        // color: rgba(#fff, 0.7)
+      }
+    }
+  }
+}

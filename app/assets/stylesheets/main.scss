@@ -16,3 +16,39 @@
     text-align: left;
   }
 }
+.project-link {
+  margin: 2em 0 0;
+  &:last-child {
+    margin-bottom: 6em;
+  }
+  &:hover, &:active, &:focus {
+    .project-header {
+      h2 {
+        text-decoration: underline;
+      }
+    }
+  }
+  .project {
+    background-color: #222;
+    height: 300px;
+    border-radius: 4px;
+    color: #fff;
+    position: relative;
+
+    .project-header {
+      position: absolute;
+      bottom: 33%;
+      left: 63%;
+      cursor: default;
+    }
+    .btn-project {
+      border: 2px solid #fff;
+      background-color: transparent;
+      &:hover, &:active, &:focus {
+        background-color: #fff;
+        border: 2px solid #222;
+        color: #222;
+      }
+    }
+  }
+}

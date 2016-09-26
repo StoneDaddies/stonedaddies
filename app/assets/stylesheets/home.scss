@@ -14,6 +14,9 @@
     border-radius: 4px;
     overflow: hidden;
     position: relative;
+    @media(max-width: 767px){
+      height: 250px;
+    }
     .scrim {
       position: absolute;
       width: 100%;
@@ -65,6 +68,38 @@
         &:nth-child(10) {
           background: image-url('fait-derbyshire/ceramic/after/20160520_172122.jpg') no-repeat center center;
         }
+        @media(max-width: 767px){
+          &:first-child {
+            background: image-url('fait-derbyshire/ceramic/before/20160518_120211-m.jpg') no-repeat center center;
+          }
+          &:nth-child(2) {
+            background: image-url('fait-derbyshire/ceramic/before/20160518_120241-m.jpg') no-repeat center center;
+          }
+          &:nth-child(3) {
+            background: image-url('fait-derbyshire/ceramic/before/20160518_120250-m.jpg') no-repeat center center;
+          }
+          &:nth-child(4) {
+            background: image-url('fait-derbyshire/ceramic/before/20160518_120259-m.jpg') no-repeat center center;
+          }
+          &:nth-child(5) {
+            background: image-url('fait-derbyshire/ceramic/before/20160518_120310-m.jpg') no-repeat center center;
+          }
+          &:nth-child(6) {
+            background: image-url('fait-derbyshire/ceramic/after/20160520_172018-m.jpg') no-repeat center center;
+          }
+          &:nth-child(7) {
+            background: image-url('fait-derbyshire/ceramic/after/20160520_172041-m.jpg') no-repeat center center;
+          }
+          &:nth-child(8) {
+            background: image-url('fait-derbyshire/ceramic/after/20160520_172056-m.jpg') no-repeat center center;
+          }
+          &:nth-child(9) {
+            background: image-url('fait-derbyshire/ceramic/after/20160520_172110-m.jpg') no-repeat center center;
+          }
+          &:nth-child(10) {
+            background: image-url('fait-derbyshire/ceramic/after/20160520_172122-m.jpg') no-repeat center center;
+          }
+        }
       }
     }
   }
@@ -89,12 +124,35 @@
         &:nth-child(6) {
           background: image-url('fait-derbyshire/paverstone/after/20160425_135459.jpg') no-repeat center center;
         }
+        @media(max-width: 767px) {
+          &:first-child {
+            background: image-url('fait-derbyshire/paverstone/before/20160421_120210-m.jpg') no-repeat center center;
+          }
+          &:nth-child(2) {
+            background: image-url('fait-derbyshire/paverstone/before/20160421_120254-m.jpg') no-repeat center center;
+          }
+          &:nth-child(3) {
+            background: image-url('fait-derbyshire/paverstone/before/20160421_120304-m.jpg') no-repeat center center;
+          }
+          &:nth-child(4) {
+            background: image-url('fait-derbyshire/paverstone/after/20160425_135422-m.jpg') no-repeat center center;
+          }
+          &:nth-child(5) {
+            background: image-url('fait-derbyshire/paverstone/after/20160425_135448-m.jpg') no-repeat center center;
+          }
+          &:nth-child(6) {
+            background: image-url('fait-derbyshire/paverstone/after/20160425_135459-m.jpg') no-repeat center center;
+          }
+        }
       }
     }
   }
 
   .project-link {
     margin: 2em 0 0;
+    @media(max-width: 767px){
+      margin: 0;
+    }
     &:last-child {
       margin-bottom: 6em;
     }
@@ -110,6 +168,9 @@
       height: 400px;
       color: #fff;
       position: relative;
+      @media(max-width: 767px){
+        height: 250px;
+      }
 
       .project-header {
         position: absolute;
@@ -119,7 +180,7 @@
         z-index: 3;
         @media(max-width: 767px){
           bottom: 13%;
-          left: 53%;
+          left: 40%;
         }
       }
       .btn-project {

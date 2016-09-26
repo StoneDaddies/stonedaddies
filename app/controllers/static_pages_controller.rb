@@ -1,3 +1,5 @@
 class StaticPagesController < ApplicationController
-  def home;end
+  def home
+    expires_in 60.minutes, :public => true
+  end
 end

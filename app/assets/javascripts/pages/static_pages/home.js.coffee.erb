@@ -11,7 +11,7 @@ StoneDaddies.pages['static_pages-home'] = ( ->
     constructor: ->
       @loadSwiper()
       @loadSwiperProgress()
-      @grabGalleryData()
+      # @grabGalleryData()
 
     loadSwiper: ->
       swiper = new Swiper(
@@ -24,7 +24,8 @@ StoneDaddies.pages['static_pages-home'] = ( ->
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         pagination: '.swiper-pagination',
-        paginationType: 'progress'
+        paginationType: 'progress',
+        slidesPerView: 'auto'
       )
 
     grabGalleryData: ->
@@ -34,9 +35,14 @@ StoneDaddies.pages['static_pages-home'] = ( ->
       console.log gallery
       images = gallery.split(" ")
       console.log images
-      imageUrl = images.first
+      imageUrl = $(images).first()
       $slides = @getElement('firstSlide')
-      $firstSlide = $slides.first()
-      console.log $firstSlide
-      $firstSlide.css('background-url',  + imageUrl + ")%>")
+      firstSlide = $slides.first()
+      imageUrl = imageUrl[0]
+      console.log firstSlide
+      console.log imageUrl
+      console.log "<%= image_url"  imageUrl  " %>"
+      debugger
+      $(firstSlide).css('background-url',  "<%= image_url"  imageUrl   " %>")
+
 )()

@@ -12,5 +12,13 @@
         // color: rgba(#fff, 0.7)
       }
     }
+    .navbar-toggle {
+      @media(max-width: 768px){
+        display: none;
+      }
+      @media(max-width: 767px){
+        display: block;
+      }
+    }
   }
 }

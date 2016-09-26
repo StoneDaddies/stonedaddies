@@ -1,246 +1,117 @@
-<div class="container">
-  <br>
-  <br>
-  <br>
-  <br>
-  <hr>
-
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
-
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="exampleModalLabel">New message</h4>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="recipient-name" class="control-label">Recipient:</label>
-              <input type="text" class="form-control" id="recipient-name">
-            </div>
-            <div class="form-group">
-              <label for="message-text" class="control-label">Message:</label>
-              <textarea class="form-control" id="message-text"></textarea>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Send message</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- <div class="swiper-container">
+<div class="main-content">
+  <div class="container">
+    <div class="swiper-container">
       <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
-          <div class="swiper-slide">Slide 5</div>
-          <div class="swiper-slide">Slide 6</div>
-          <div class="swiper-slide">Slide 7</div>
-          <div class="swiper-slide">Slide 8</div>
-          <div class="swiper-slide">Slide 9</div>
-          <div class="swiper-slide">Slide 10</div>
+        <div class="swiper-slide">
+          <h1>Providing Professional Quality and Life-Long Product Education</h1>
+        </div>
+        <div class="swiper-slide">
+          <h2>Servicing Stone, Tile and Grout by restoring them to their former glory</h2>
+        </div>
+        <div class="swiper-slide">
+          <h3>Stone Daddies wants our clients to be happy for a lifetime, not just until the workers get paid and leave</h3>
+        </div>
       </div>
-
+      <!-- Add Pagination -->
       <div class="swiper-pagination"></div>
+    </div>
 
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-  </div> -->
+    <br>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
 
-  <script>
-  $('#exampleModal').on('show.bs.modal', function (event) {
-    var button = $(event.relatedTarget) // Button that triggered the modal
-    var recipient = button.data('whatever') // Extract info from data-* attributes
-    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    var modal = $(this)
-    modal.find('.modal-title').text('New message to ' + recipient)
-    modal.find('.modal-body input').val(recipient)
-  })
-  </script>
-
-  <hr>
-  <br>
-  <br>
-  <br>
-  <br>
-  <div class="project-link col-sm-12">
-    <article class="project">
-      <div class="project-header">
-        <h2>Travertine</h2>
-        <button class="btn btn-project" type="button" name="button">Learn More</button>
-      </div>
-      <div class="swiper-container">
-          <div class="swiper-wrapper">
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              <div class="swiper-slide">Slide 4</div>
-              <div class="swiper-slide">Slide 5</div>
-              <div class="swiper-slide">Slide 6</div>
-              <div class="swiper-slide">Slide 7</div>
-              <div class="swiper-slide">Slide 8</div>
-              <div class="swiper-slide">Slide 9</div>
-              <div class="swiper-slide">Slide 10</div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel">New message</h4>
           </div>
-          <!-- Add Pagination -->
-          <div class="swiper-pagination"></div>
-          <!-- Add Arrows -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-      </div>
-    </article>
-  </div>
-  <div class="project-link col-sm-12">
-    <article class="project">
-      <div class="project-header">
-        <h2>Marble</h2>
-        <button class="btn btn-project" type="button" name="button">Learn More</button>
-      </div>
-      <div class="swiper-container">
-          <div class="swiper-wrapper">
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              <div class="swiper-slide">Slide 4</div>
-              <div class="swiper-slide">Slide 5</div>
-              <div class="swiper-slide">Slide 6</div>
-              <div class="swiper-slide">Slide 7</div>
-              <div class="swiper-slide">Slide 8</div>
-              <div class="swiper-slide">Slide 9</div>
-              <div class="swiper-slide">Slide 10</div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">Recipient:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="control-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
           </div>
-          <!-- Add Pagination -->
-          <div class="swiper-pagination"></div>
-          <!-- Add Arrows -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-      </div>
-    </article>
-  </div>
-  <div class="project-link col-sm-12">
-    <article class="project">
-      <div class="project-header">
-        <h2>Pavers Stone</h2>
-        <button class="btn btn-project" type="button" name="button">Learn More</button>
-      </div>
-      <div class="swiper-container">
-          <div class="swiper-wrapper">
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              <div class="swiper-slide">Slide 4</div>
-              <div class="swiper-slide">Slide 5</div>
-              <div class="swiper-slide">Slide 6</div>
-              <div class="swiper-slide">Slide 7</div>
-              <div class="swiper-slide">Slide 8</div>
-              <div class="swiper-slide">Slide 9</div>
-              <div class="swiper-slide">Slide 10</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send message</button>
           </div>
-          <!-- Add Pagination -->
-          <div class="swiper-pagination"></div>
-          <!-- Add Arrows -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-      </div>
-    </article>
-  </div>
-  <div class="project-link col-sm-12">
-    <article class="project">
-      <div class="project-header">
-        <h2>Pressed Travertine</h2>
-        <button class="btn btn-project" type="button" name="button">Learn More</button>
-      </div>
-    </article>
-  </div>
-  <div class="project-link col-sm-12">
-    <article class="project">
-      <div class="project-header">
-        <h2>Blue Tile</h2>
-        <button class="btn btn-project" type="button" name="button">Learn More</button>
-      </div>
-    </article>
-  </div>
-
-  <!-- <section>
-    <div class="col-md-4">
-      <div class="" style="height: 200px; width: 200px; border-radius: 50%; background-color: #222; margin: 0 auto;">
+        </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="" style="height: 200px; width: 200px; border-radius: 50%; background-color: #222; margin: 0 auto;">
+
+
+    <script>
+    $('#exampleModal').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) // Button that triggered the modal
+      var recipient = button.data('whatever') // Extract info from data-* attributes
+      // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+      // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+      var modal = $(this)
+      modal.find('.modal-title').text('New message to ' + recipient)
+      modal.find('.modal-body input').val(recipient)
+    })
+    </script>
+
+    <div class="project-link col-sm-12" data-gallery="20160520_172122.jpg 20160520_172041.jpg 20160520_172056.jpg 20160520_172110.jpg">
+      <div class="row">
+        <article class="project">
+          <div class="project-header">
+            <h2>Travertine</h2>
+            <button class="btn btn-project" type="button" name="button">Learn More</button>
+          </div>
+          <div class="swiper-container-progress">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  
+                </div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+          </div>
+        </article>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="" style="height: 200px; width: 200px; border-radius: 50%; background-color: #222; margin: 0 auto;">
+
+    <div class="project-link col-sm-12">
+      <div class="row">
+        <article class="project">
+          <div class="project-header">
+            <h2>Marble</h2>
+            <button class="btn btn-project" type="button" name="button">Learn More</button>
+          </div>
+          <div class="swiper-container-progress">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                  <div class="swiper-slide">Slide 7</div>
+                  <div class="swiper-slide">Slide 8</div>
+                  <div class="swiper-slide">Slide 9</div>
+                  <div class="swiper-slide">Slide 10</div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+          </div>
+        </article>
       </div>
     </div>
-  </section> -->
-  <!-- contact form -->
-  <!-- <section class="row" id="contact-section">
-    <h2>Contact Us</h2>
-    <form class="form-horizontal">
-      <fieldset>
-        <legend>Drop us a line</legend>
-        <div class="form-group">
-          <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-          <div class="col-lg-10">
-            <input type="text" class="form-control" id="inputEmail" placeholder="Email">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="inputPhone" class="col-lg-2 control-label">Phone</label>
-          <div class="col-lg-10">
-            <input type="tel" name="usrtel" class="form-control" id="inputPhone" placeholder="(123)-456-7890">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="textArea" class="col-lg-2 control-label">Message</label>
-          <div class="col-lg-10">
-            <textarea class="form-control" rows="3" id="textArea"></textarea>
-            <span class="help-block">Ask a question to the stone restoration experts or give us a little detail about the project you have in mind.</span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="col-lg-2 control-label">Options</label>
-          <div class="col-lg-10">
-            <div class="radio">
-              <label>
-                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-                Would you rather us call you? (If so, please leave a number above!)
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                Would you rather us contact you through email?
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-lg-10 col-lg-offset-2">
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
-        </div>
-      </fieldset>
-    </form>
-  </section> -->
-  <script>
-    var swiper = new Swiper('.swiper-container', {
-      nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev',
-      pagination: '.swiper-pagination',
-      paginationType: 'progress'
-    });
-  </script>
+  </div>
 </div>

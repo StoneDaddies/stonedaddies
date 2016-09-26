@@ -1,32 +1,45 @@
 #static_pages-home {
+  .main-content {
+    margin-bottom: 200px;
+  }
   .swiper-container {
+    width: 100%;
+    height: 200px;
+
+  }
+  .swiper-container-progress {
     width: 100%;
     height: 300px;
     margin: 10px auto;
+    border-radius: 4px;
+    overflow: hidden;
+    .swiper-slide {
+      border: 1px solid black;
+      text-align: center;
+      font-size: 18px;
+      background: #222;
+      line-height: 300px;
+      // background: image-url('fait-derbyshire/ceramic/after/20160520_172122.jpg') no-repeat center center;
+    }
+    .swiper-pagination-progressbar {
+    }
   }
-  .swiper-slide {
-    border: 1px solid black;
-    text-align: center;
-    font-size: 18px;
-    background: #222;
-    line-height: 300px;
-  }
+
   .project-link {
     margin: 2em 0 0;
     &:last-child {
       margin-bottom: 6em;
     }
     &:hover, &:active, &:focus {
-      .project-header {
-        h2 {
-          text-decoration: underline;
-        }
-      }
+        // .project-header {
+        //   h2 {
+        //     text-decoration: underline;
+        //   }
+        // }
     }
     .project {
       background-color: #222;
       height: 300px;
-      border-radius: 4px;
       color: #fff;
       position: relative;
 
@@ -36,6 +49,10 @@
         left: 63%;
         cursor: default;
         z-index: 2;
+        @media(max-width: 767px){
+          bottom: 13%;
+          left: 53%;
+        }
       }
       .btn-project {
         border: 2px solid #fff;

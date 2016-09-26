@@ -18,7 +18,7 @@ gem 'jquery-rails'
 # gem 'react-rails', '~> 1.8.0'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'font-awesome-rails'
-gem 'bootswatch-rails'
+
 # gem 'simple_form'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -41,7 +41,8 @@ group :development, :test do
   gem 'byebug'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'quiet_assets'
+  gem 'pry-byebug'   # This may or may not work with 2.1.2 either, so remove if you still get errorrs
+  gem 'quiet_assets', '>= 1.0.1'
 end
 
 group :development do

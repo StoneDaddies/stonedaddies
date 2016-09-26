@@ -1,0 +1,42 @@
+StoneDaddies = window.StoneDaddies = window.StoneDaddies || {}
+StoneDaddies.pages = StoneDaddies.pages || {}
+StoneDaddies.pages['static_pages-home'] = ( ->
+
+  class StaticPagesHome extends StoneDaddies.BaseTools
+
+    selectors:
+      projectLinks: '.project-link'
+      firstSlide: '.project-link .swiper-slide'
+
+    constructor: ->
+      @loadSwiper()
+      @loadSwiperProgress()
+      @grabGalleryData()
+
+    loadSwiper: ->
+      swiper = new Swiper(
+        '.swiper-container',
+        pagination: '.swiper-pagination'
+      )
+    loadSwiperProgress: ->
+      swiper = new Swiper(
+        '.swiper-container-progress',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        pagination: '.swiper-pagination',
+        paginationType: 'progress'
+      )
+
+    grabGalleryData: ->
+      $projects = @getElement('projectLinks')
+      $firstProject = $projects.first()
+      gallery = $firstProject.data('gallery')
+      console.log gallery
+      images = gallery.split(" ")
+      console.log images
+      imageUrl = images.first
+      $slides = @getElement('firstSlide')
+      $firstSlide = $slides.first()
+      console.log $firstSlide
+      $firstSlide.css('background-url',  + imageUrl + ")%>")
+)()

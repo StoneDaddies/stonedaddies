@@ -1,0 +1,54 @@
+StoneDaddies = window.StoneDaddies = window.StoneDaddies || {}
+StoneDaddies.BaseTools = ( ->
+
+  class BaseTools
+
+    # @param {String | jQuery Element}
+    # @throws {Error} when the jquery element is empty
+    # @return {jQuery Element}
+    isValidElement: ($el) ->
+      if $($el).length == 0
+        @debug ->
+          console.log "empty element #{$el}"
+      $($el)
+
+    # @param {String | jQuery Element}
+    # @throws {Error} when the jquery element is empty
+    # @return {Boolean}
+    isEmptyElement: (key) ->
+      $(@selectors[key]).length == 0
+
+    # @param {String | jQuery Element}
+    # @throws {Error} when there are more than 1 elements in
+    # @return {jQuery Element}
+    isUniqueElement: ($el) ->
+      if $($el).length > 1
+        @debug ->
+          console.log "is not unique element #{$el}"
+      $($el)
+
+    # @param {String} key string from selectors object
+    # @throws {Error} when the element is not found
+    # @return {jQuery Element}
+    getElement: (key) ->
+      @isValidElement @selectors[key]
+
+    # @param {String} key string from selectors object
+    # @throws {Error} when the element is not found
+    # @return {input value}
+    getVal: (key) ->
+      @getElement(key).val()
+
+    # selector is a object that should store all the dom selectors used for one
+    # module or page
+    selectors: {}
+
+    # allows you to run things on non production enviroments such as console.log
+    # @param {arguments}
+    # @return {undefined}
+    debug: (callback = ->)->
+      <% if ENV['RAILS_ENV'] == 'development' %>
+        callback?()
+      <% end %>
+
+)()

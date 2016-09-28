@@ -1,6 +1,6 @@
 #static_pages-home {
   .main-content {
-    margin-bottom: 200px;
+    margin-bottom: 100px;
   }
   .swiper-container {
     width: 100%;
@@ -183,15 +183,12 @@
           left: 20%;
         }
       }
-      .btn-project {
-        border: 2px solid #fff;
-        background-color: transparent;
-        &:hover, &:active, &:focus {
-          background-color: #fff;
-          border: 2px solid #fff;
-          color: #000;
-        }
-      }
     }
+  }
+
+  #contact-form {
+    padding: 20px 0 40px 0;
+    background-color: #000;
+    color: #fff;
   }
 }

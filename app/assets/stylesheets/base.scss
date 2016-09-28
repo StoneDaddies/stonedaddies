@@ -4,6 +4,7 @@ html {
 }
 body {
   min-height: 100%;
+  font-family: 'Roboto', sans-serif, 'Arial';
 }
 .navbar {
   margin-bottom: 0;
@@ -23,6 +24,20 @@ body {
   @media(max-width: 767px){
     width: 100%;
   }
+}
+.btn {
+  color: #fff;
+  padding: 5px 30px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  &:hover, &:active, &:focus {
+    background-color: #fff;
+    border: 2px solid #fff;
+    color: #000;
+  }
+}
+.form-group {
+  margin-bottom: 5px;
 }
 .footer {
   padding: 10px;

@@ -1,8 +1,18 @@
 <div class="main-content">
   <div class="container">
     <% @contacts.each do |contact| %>
-      <%= contact.first_name %>
-      <%= contact.last_name %>
+    <table>
+      <tr>
+        <td>
+          <%= contact.first_name %>
+          <%= contact.last_name %>
+          <%= contact.email %>
+          <%= contact.phone_number %>
+          <%= contact.description %>
+          <%= contact.referral %>
+        </td>
+      </tr>
+    </table>
     <% end %>
   </div>
 </div>

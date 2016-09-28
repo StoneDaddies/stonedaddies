@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
 
-  resources :contacts
+  # resources :contacts
+  post '/contacts', to: 'contacts#create'
+  get '/contacts', to: 'contacts#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

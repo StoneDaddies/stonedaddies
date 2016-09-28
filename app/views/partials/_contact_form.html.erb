@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <h3>Contact Form</h3>
+        <h4>Contact Form</h4>
       </div>
     </div>
     <div class="row">
@@ -10,54 +10,54 @@
 
       </div>
       <div class="col-sm-6">
-        <form class="form-horizontal">
-          <div class="form-group">
-            <div class="col-sm-6">
-              <label for="inputFirstName">First Name</label>
-              <input type="text" class="form-control" id="inputFirstName" name="first name" placeholder="First Name">
-            </div>
-            <div class="col-sm-6">
-              <label for="inputLastName">Last Name</label>
-              <input type="text" class="form-control" id="inputLastName" name="last name" placeholder="Last Name">
-            </div>
+      <%= form_for @contact, url: "/contact", class: "form-horizontal" do |contact| %>
+        <div class="form-group">
+          <div class="col-sm-6">
+            <%= label_tag :first_name, "First Name", for: "inputFirstName" %>
+            <%= contact.text_field :first_name, class: "form-control", id: "inputFirstName", name: "first name", placeholder: "First Name" %>
           </div>
-          <div class="form-group">
-            <div class="col-sm-12">
-              <label for="inputEmail3">Email</label>
-              <input type="email" class="form-control" id="inputEmail3" name="email" placeholder="Email">
-            </div>
+          <div class="col-sm-6">
+            <%= label_tag :last_name, "Last Name", for: "inputLastName" %>
+            <%= contact.text_field :last_name, class: "form-control", id: "inputLastName", name: "last name", placeholder: "Last Name" %>
           </div>
-          <div class="form-group">
-            <div class="col-sm-12">
-              <label for="inputPhoneNumber">Phone Number</label>
-              <input type="text" class="form-control" id="inputPhoneNumber" name="phone number" placeholder="(123)-456-7890">
-            </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-12">
+            <%= label_tag :email, "Email", for: "inputEmail" %>
+            <%= contact.email_field :email, class: "form-control", id: "inputEmail", name: "email", placeholder: "Email" %>
           </div>
-          <div class="form-group">
-            <div class="col-sm-12">
-              <label for="inputDescription">Describe the job you have in mind</label>
-              <textarea type="text" class="form-control" id="inputDescription" name="description field" placeholder="Travertine, Stone, Grout, Paverstone, Marble restoration services and more" rows="5"></textarea>
-            </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-12">
+            <%= label_tag :phone_number, "Phone Number", for: "inputPhoneNumber" %>
+            <%= contact.telephone_field :phone_number, class: "form-control", id: "inputPhoneNumber", name: "phone number", placeholder: "(123)-456-7890" %>
           </div>
-          <div class="form-group">
-            <div class="col-sm-12">
-              <label for="inputReferral">How did you hear about our services?</label>
-              <select class="form-control" id="inputeReferral" name="referral">
-                <option value="">Referral Source</option>
-                <option value="friend">Friend</option>
-                <option value="home-advisor">Home Advisor</option>
-                <option value="website">Web Site</option>
-                <option value="social-media">Social Media</option>
-                <option value="facebook">Facebook</option>
-              </select>
-            </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-12">
+            <%= label_tag :description, "Description", for: "inputDescription" %>
+            <%= contact.text_area :description, class: "form-control", id: "inputDescription", name: "description", placeholder: "Travertine, Stone, Grout, Paverstone, Marble restoration services and more", rows: "5" %>
           </div>
-          <div class="form-group">
-            <div class="col-sm-3 pull-right">
-              <button type="submit" class="btn btn-default">Submit</button>
-            </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-12">
+            <label for="inputReferral">How did you hear about our services?</label>
+            <select class="form-control" id="inputReferral" name="referral">
+              <option value="">Referral Source</option>
+              <option value="friend">Friend</option>
+              <option value="home-advisor">Home Advisor</option>
+              <option value="website">Web Site</option>
+              <option value="social-media">Social Media</option>
+              <option value="facebook">Facebook</option>
+            </select>
           </div>
-        </form>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-3 pull-right">
+            <%= contact.submit "Submit", class: "btn btn-default" %>
+          </div>
+        </div>
+      <% end %>
       </div>
 
     </div>

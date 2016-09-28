@@ -1,0 +1,8 @@
+<div class="main-content">
+  <div class="container">
+    <% @contacts.each do |contact| %>
+      <%= contact.first_name %>
+      <%= contact.last_name %>
+    <% end %>
+  </div>
+</div>

@@ -10,33 +10,33 @@
 
       </div>
       <div class="col-sm-6">
-      <%= form_for @contact, url: "/contact", class: "form-horizontal" do |contact| %>
+      <%= form_for(@contact, class: "form-horizontal", url: contacts_path) do |f| %>
         <div class="form-group">
           <div class="col-sm-6">
             <%= label_tag :first_name, "First Name", for: "inputFirstName" %>
-            <%= contact.text_field :first_name, class: "form-control", id: "inputFirstName", name: "first name", placeholder: "First Name" %>
+            <%= f.text_field :first_name, class: "form-control", id: "inputFirstName", name: "first_name", placeholder: "First Name" %>
           </div>
           <div class="col-sm-6">
             <%= label_tag :last_name, "Last Name", for: "inputLastName" %>
-            <%= contact.text_field :last_name, class: "form-control", id: "inputLastName", name: "last name", placeholder: "Last Name" %>
+            <%= f.text_field :last_name, class: "form-control", id: "inputLastName", name: "last_name", placeholder: "Last Name" %>
           </div>
         </div>
         <div class="form-group">
           <div class="col-sm-12">
             <%= label_tag :email, "Email", for: "inputEmail" %>
-            <%= contact.email_field :email, class: "form-control", id: "inputEmail", name: "email", placeholder: "Email" %>
+            <%= f.email_field :email, class: "form-control", id: "inputEmail", name: "email", placeholder: "Email" %>
           </div>
         </div>
         <div class="form-group">
           <div class="col-sm-12">
             <%= label_tag :phone_number, "Phone Number", for: "inputPhoneNumber" %>
-            <%= contact.telephone_field :phone_number, class: "form-control", id: "inputPhoneNumber", name: "phone number", placeholder: "(123)-456-7890" %>
+            <%= f.telephone_field :phone_number, class: "form-control", id: "inputPhoneNumber", name: "phone_number", placeholder: "(123)-456-7890" %>
           </div>
         </div>
         <div class="form-group">
           <div class="col-sm-12">
             <%= label_tag :description, "Description", for: "inputDescription" %>
-            <%= contact.text_area :description, class: "form-control", id: "inputDescription", name: "description", placeholder: "Travertine, Stone, Grout, Paverstone, Marble restoration services and more", rows: "5" %>
+            <%= f.text_area :description, class: "form-control", id: "inputDescription", name: "description", placeholder: "Travertine, Stone, Grout, Paverstone, Marble restoration services and more", rows: "5" %>
           </div>
         </div>
         <div class="form-group">
@@ -54,7 +54,7 @@
         </div>
         <div class="form-group">
           <div class="col-sm-3 pull-right">
-            <%= contact.submit "Submit", class: "btn btn-default" %>
+            <%= f.submit "Submit", class: "btn btn-default" %>
           </div>
         </div>
       <% end %>

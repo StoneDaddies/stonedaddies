@@ -12,7 +12,7 @@ Version 0.1
 
 - Make sure running Ruby 2.2.0 and Rails 4.2.1
 - Clone or Fork project
-- cd StoneDaddies
+- `cd StoneDaddies`
 - `$ bundle install`
 - `$ rake db:create && rake db:migrate`
 - `$ rails s`

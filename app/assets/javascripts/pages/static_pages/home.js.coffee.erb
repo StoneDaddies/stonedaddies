@@ -7,16 +7,18 @@ StoneDaddies.pages['static_pages-home'] = ( ->
     selectors:
       projectLinks: '.project-link'
       firstSlide: '.project-link .swiper-slide'
+      btnMore: '.btn-more'
 
     constructor: ->
       @loadSwiper()
       @loadSwiperProgress()
+      @setup()
 
     loadSwiper: ->
       swiper = new Swiper(
         '.swiper-container',
         pagination: '.swiper-pagination',
-        # autoplay: 2000
+        autoplay: 2000
       )
     loadSwiperProgress: ->
       swiper = new Swiper(
@@ -26,5 +28,20 @@ StoneDaddies.pages['static_pages-home'] = ( ->
         pagination: '.swiper-pagination',
         paginationType: 'progress'
       )
+
+    setup: ->
+      that = @
+      btnMore = @getElement('btnMore')
+      console.log $(btnMore).text()
+      $(btnMore).click ->
+        text = $(this).text()
+        console.log text
+        if text == 'More...'
+          # console.log('clicked')
+          $(this).text('Less...')
+          $('.cities').css('height', '100%')
+        else if text == 'Less...'
+          $(this).text('More...')
+          $('.cities').css('height', '20px')
 
 )()

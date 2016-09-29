@@ -4,6 +4,33 @@
   position: absolute;
   bottom: 0;
   background-color: #222;
-  color: #fff;
+  color: #9d9d9d;
   width: 100%;
+  .like-us {
+    .text {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  #top-footer {
+    @media(max-width: 767px){
+      padding: 5px;
+    }
+  }
+  #links {
+    @media(max-width: 767px){
+      border-top: 1px solid #9d9d9d;
+      padding: 5px;
+    }
+    .fa {
+      vertical-align: middle;
+    }
+  }
+  #bottom-footer {
+    border-top: 1px solid #9d9d9d;
+    padding-top: 10px;
+    @media(max-width: 767px){
+      padding: 5px;
+    }
+  }
 }

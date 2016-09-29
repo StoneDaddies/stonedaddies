@@ -39,9 +39,25 @@ body {
     color: #000;
   }
 }
+.btn-link {
+  border: 0;
+  color: inherit;
+  padding: 0;
+  &:hover, &:active, &:focus {
+    border: 0;
+  }
+}
 .form-group {
   margin-bottom: 10px;
 }
 .fa {
-  font-size: 5em;
+  font-size: 2em;
+}
+a {
+  color: #fff;
+  cursor: grab;
+  &:hover, &:active, &:focus {
+    color: #555;
+    text-decoration: none;
+  }
 }

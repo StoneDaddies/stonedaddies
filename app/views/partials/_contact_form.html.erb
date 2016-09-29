@@ -7,54 +7,57 @@
     </div>
     <div class="row">
       <div class="col-sm-8 col-sm-offset-4">
-      <%= form_for(@contact, class: "form-horizontal", url: contacts_path) do |f| %>
-        <div class="form-group">
-          <div class="col-sm-6">
-            <%= label_tag :first_name, "First Name", for: "inputFirstName" %>
-            <%= f.text_field :first_name, class: "form-control", id: "inputFirstName", name: "first_name", placeholder: "First Name" %>
-          </div>
-          <div class="col-sm-6">
-            <%= label_tag :last_name, "Last Name", for: "inputLastName" %>
-            <%= f.text_field :last_name, class: "form-control", id: "inputLastName", name: "last_name", placeholder: "Last Name" %>
-          </div>
+        <div class="row">
+          <%= form_for(@contact, class: "form-horizontal", url: contacts_path) do |f| %>
+            <div class="form-group">
+              <div class="col-sm-6">
+                <%= label_tag :first_name, "First Name", for: "inputFirstName" %>
+                <%= f.text_field :first_name, class: "form-control", id: "inputFirstName", name: "first_name", placeholder: "First Name" %>
+              </div>
+              <div class="col-sm-6">
+                <%= label_tag :last_name, "Last Name", for: "inputLastName" %>
+                <%= f.text_field :last_name, class: "form-control", id: "inputLastName", name: "last_name", placeholder: "Last Name" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <%= label_tag :email, "Email", for: "inputEmail" %>
+                <%= f.email_field :email, class: "form-control", id: "inputEmail", name: "email", placeholder: "Email" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <%= label_tag :phone_number, "Phone Number", for: "inputPhoneNumber" %>
+                <%= f.telephone_field :phone_number, class: "form-control", id: "inputPhoneNumber", name: "phone_number", placeholder: "(123)-456-7890" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <%= label_tag :description, "Description", for: "inputDescription" %>
+                <%= f.text_area :description, class: "form-control", id: "inputDescription", name: "description", placeholder: "Travertine, Stone, Grout, Paverstone, Marble restoration services and more", rows: "5" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <label for="inputReferral">How did you hear about our services?</label>
+                <select class="form-control" id="inputReferral" name="referral">
+                  <option value="">Referral Source</option>
+                  <option value="friend">Friend</option>
+                  <option value="home-advisor">Home Advisor</option>
+                  <option value="website">Web Site</option>
+                  <option value="social-media">Social Media</option>
+                  <option value="facebook">Facebook</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-3 pull-right">
+                <%= f.submit "Submit", class: "btn btn-default" %>
+              </div>
+            </div>
+          <% end %>
         </div>
-        <div class="form-group">
-          <div class="col-sm-12">
-            <%= label_tag :email, "Email", for: "inputEmail" %>
-            <%= f.email_field :email, class: "form-control", id: "inputEmail", name: "email", placeholder: "Email" %>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-12">
-            <%= label_tag :phone_number, "Phone Number", for: "inputPhoneNumber" %>
-            <%= f.telephone_field :phone_number, class: "form-control", id: "inputPhoneNumber", name: "phone_number", placeholder: "(123)-456-7890" %>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-12">
-            <%= label_tag :description, "Description", for: "inputDescription" %>
-            <%= f.text_area :description, class: "form-control", id: "inputDescription", name: "description", placeholder: "Travertine, Stone, Grout, Paverstone, Marble restoration services and more", rows: "5" %>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-12">
-            <label for="inputReferral">How did you hear about our services?</label>
-            <select class="form-control" id="inputReferral" name="referral">
-              <option value="">Referral Source</option>
-              <option value="friend">Friend</option>
-              <option value="home-advisor">Home Advisor</option>
-              <option value="website">Web Site</option>
-              <option value="social-media">Social Media</option>
-              <option value="facebook">Facebook</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-3 pull-right">
-            <%= f.submit "Submit", class: "btn btn-default" %>
-          </div>
-        </div>
-      <% end %>
+
       </div>
 
     </div>

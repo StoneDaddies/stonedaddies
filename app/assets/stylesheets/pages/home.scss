@@ -215,4 +215,20 @@
       }
     }
   }
+  .service-areas {
+    margin-top: 20px;
+    padding-bottom: 40px;
+
+    .cities {
+      border-top: 1px solid black;
+      word-spacing: 10px;
+      transition: height;
+      transition-duration: 600ms;
+      transition-timing-function: ease-in-out;;
+      @media(max-width: 767px){
+        height: 20px;
+        overflow: hidden;
+      }
+    }
+  }
 }

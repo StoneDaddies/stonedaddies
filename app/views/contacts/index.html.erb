@@ -1,18 +1,61 @@
 <div class="main-content">
   <div class="container">
-    <% @contacts.each do |contact| %>
-    <table>
-      <tr>
-        <td>
-          <%= contact.first_name %>
-          <%= contact.last_name %>
-          <%= contact.email %>
-          <%= contact.phone_number %>
-          <%= contact.description %>
-          <%= contact.referral %>
-        </td>
-      </tr>
+    <h1>Contact Page</h1>
+  </div>
+  <div class="container contact-table">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>
+            #
+          </th>
+          <th>
+            First name
+          </th>
+          <th class="hidden-xs">
+            Last Name
+          </th>
+          <th class="hidden-xs">
+            Email
+          </th>
+          <th>
+            Phone Number
+          </th>
+          <th class="hidden-xs">
+            Job Description
+          </th>
+          <th>
+            Referral Source
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @contacts.each do |contact| %>
+        <tr>
+          <th scope="row">
+            <%= contact.id %>
+          </th>
+          <td>
+            <%= contact.first_name %>
+          </td>
+          <td class="hidden-xs">
+            <%= contact.last_name %>
+          </td>
+          <td class="hidden-xs">
+            <%= contact.email %>
+          </td>
+          <td>
+            <%= contact.phone_number %>
+          </td>
+          <td class="hidden-xs">
+            <%= contact.description %>
+          </td>
+          <td>
+            <%= contact.referral %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
     </table>
-    <% end %>
   </div>
 </div>

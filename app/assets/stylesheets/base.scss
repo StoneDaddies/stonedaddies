@@ -14,15 +14,16 @@ body {
   height: 450px;
 }
 .main-content {
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 .container {
-  width: 1170px;
+  width: 950px;
   @media(max-width: 991px){
-    width: 970px;
+    width: 800px;
   }
   @media(max-width: 768px){
-    width: 750px;
+    width: 100%;
   }
   @media(max-width: 767px){
     width: 100%;
@@ -41,21 +42,6 @@ body {
 .form-group {
   margin-bottom: 10px;
 }
-.footer {
-  padding: 10px;
-  margin-top: 20px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  background-color: #222;
-  color: #fff;
-  p {
-    float: right;
-  }
-}
 .fa {
   font-size: 5em;
-}
-.hdr-2 {
-
 }

@@ -1,4 +1,8 @@
 #navigation {
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  margin-bottom: 50px;  
   .navbar-header {
     a.navbar-brand {
       font-weight: 800;

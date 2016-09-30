@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Stonedaddies</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Roboto' %>
   <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 </head>
 <body id="<%= "#{controller_name_for_id}-#{action_name}" %>" class="<%= controller_name %>" data-no-turbolink>
 
   <%= render partial: 'layouts/navigation' %>
+
   <div class="container">
     <% flash.each do |message_type, message| %>
       <div class="alert alert-<%= message_type %>"><%= message %></div>
     <% end %>
   </div>
+
   <%= yield %>
+  <div class="container">
+    <%= debug(params) if Rails.env.development? %>
+  </div>
+  <br>
 
   <%= render partial: 'layouts/footer' %>
 

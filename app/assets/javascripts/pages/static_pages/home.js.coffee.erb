@@ -18,8 +18,9 @@ StoneDaddies.pages['static_pages-home'] = ( ->
       swiper = new Swiper(
         '.swiper-container',
         pagination: '.swiper-pagination',
-        autoplay: 2000
+        autoplay: 3500
       )
+
     loadSwiperProgress: ->
       swiper = new Swiper(
         '.swiper-container-progress',
@@ -29,19 +30,26 @@ StoneDaddies.pages['static_pages-home'] = ( ->
         paginationType: 'progress'
       )
 
+
     setup: ->
       that = @
       btnMore = @getElement('btnMore')
-      console.log $(btnMore).text()
       $(btnMore).click ->
         text = $(this).text()
-        console.log text
         if text == 'More...'
-          # console.log('clicked')
           $(this).text('Less...')
-          $('.cities').css('height', '100%')
+          $('.cities').animate { height: 315 }, 200
         else if text == 'Less...'
           $(this).text('More...')
-          $('.cities').css('height', '20px')
+          $('.cities').animate { height: 30 }, 200
+
+      $('.smoothScroll').click ->
+        if location.pathname.replace(/^\//, '') == @pathname.replace(/^\//, '') or location.hostname == @hostname
+          target = $(@hash)
+          target = if target.length then target else $('[name=' + @hash.slice(1) + ']')
+          if target.length
+            $('body').animate { scrollTop: target.offset().top }, 1000
+            return false
+        return
 
 )()

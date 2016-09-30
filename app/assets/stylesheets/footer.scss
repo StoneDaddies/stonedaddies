@@ -1,11 +1,14 @@
 #footer {
-  padding: 10px;
+  padding-top: 10px;
   margin-top: 20px;
   position: absolute;
   bottom: 0;
   background-color: #222;
   color: #9d9d9d;
   width: 100%;
+  @media(max-width: 767px){
+    text-align: left;
+  }
   .like-us {
     .text {
       display: inline-block;
@@ -24,6 +27,18 @@
     }
     .fa {
       vertical-align: middle;
+    }
+  }
+  #contact-us {
+    @media(max-width: 767px){
+      border-top: 1px solid #9d9d9d;
+      padding: 5px;
+    }
+    .contact {
+      .text {
+        display: inline-block;
+        vertical-align: middle;
+      }
     }
   }
   #bottom-footer {

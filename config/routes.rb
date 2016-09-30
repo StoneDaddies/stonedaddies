@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
-  delete '/logout', to: 'session#destroy'
+  delete '/logout', to: 'sessions#destroy'
 
   post '/users', to: 'users#create'
   # TODO delete resources users and only keep routes need for now

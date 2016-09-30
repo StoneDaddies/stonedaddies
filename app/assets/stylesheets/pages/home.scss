@@ -252,6 +252,9 @@
         color: #000;
       }
     }
+    @media(max-width: 767px){
+      margin-bottom: 90px;
+    }
   }
   .service-areas {
     margin-top: 20px;

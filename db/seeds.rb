@@ -7,5 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-# User.where(email: "stonedaddies@gmail.com", password: "Stonedaddies4me", role: "Admin").first_or_create
-# User.where(email: "austinjuliuskim@gmail.com", password: "Stonedaddies4you", role: "Admin").first_or_create
+User.where(email: "stonedaddies@gmail.com", password: "Stonedaddies4me", role: "Admin").first_or_create
+User.where(email: "austinjuliuskim@gmail.com", password: "Stonedaddies4you", role: "Admin").first_or_create

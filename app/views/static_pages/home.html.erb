@@ -1,26 +1,26 @@
 <div class="main-content">
   <div class="swiper-container">
+    <div class="scrim">
+      <h1>STONE<span>DADDIES</span></h1>
+    </div>
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <h1>Providing Professional Quality and Life-Long Product Education</h1>
+      <div class="swiper-slide" style="background: url('<%= image_url('header/20160321_162632.jpg') %>') no-repeat center center; background-size: cover;">
       </div>
-      <div class="swiper-slide">
-        <h2>Servicing Stone, Tile and Grout by restoring them to their former glory</h2>
+      <div class="swiper-slide" style="background: url('<%= image_url('header/20160520_172018.jpg') %>') no-repeat center center; background-size: cover;">
       </div>
-      <div class="swiper-slide">
-        <h3>Stone Daddies wants our clients to be happy for a lifetime,<br> not just until the workers get paid and leave</h3>
+      <div class="swiper-slide" style="background: url('<%= image_url('header/20160520_172029.jpg') %>') no-repeat center center; background-size: cover;">
       </div>
     </div>
     <div class="swiper-pagination"></div>
   </div>
   <div class="container">
 
-    <div class="project-link col-sm-12">
+    <div class="project-link col-sm-12" id="ceramic">
       <div class="row">
         <article class="project ceramic fait-derbyshire">
           <div class="project-header">
             <h2>Ceramic Hot Tub</h2>
-            <button class="btn btn-project" type="button" name="button">Learn More</button>
+            <button class="btn btn-project disabled" type="button" name="button">Learn More</button>
           </div>
           <div class="swiper-container-progress">
             <div class="scrim"></div>
@@ -36,9 +36,7 @@
               <div class="swiper-slide"></div>
               <div class="swiper-slide"></div>
             </div>
-            <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
-            <!-- Add Arrows -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
           </div>
@@ -46,12 +44,12 @@
       </div>
     </div>
 
-    <div class="project-link col-sm-12">
+    <div class="project-link col-sm-12" id="#paverstone">
       <div class="row">
         <article class="project paverstone fait-derbyshire">
           <div class="project-header">
             <h2>Paverstone Master BR</h2>
-            <button class="btn btn-project" type="button" name="button">Learn More</button>
+            <button class="btn btn-project disabled" type="button" name="button">Learn More</button>
           </div>
           <div class="swiper-container-progress">
             <div class="scrim"></div>
@@ -63,9 +61,7 @@
                 <div class="swiper-slide"></div>
                 <div class="swiper-slide"></div>
             </div>
-            <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
-            <!-- Add Arrows -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
           </div>
@@ -74,10 +70,4 @@
     </div>
   </div>
   <%= render "partials/contact_form" %>
-  <div class="container">
-    <div class="service-areas">
-      <h5>We currently service the following areas. If you have a job in an area not listed below, please contact us and we will see what we can do to take care of your restoration needs.</h5>
-      <p class="cities">Long Beach, Anaheim, Los Angeles, Irvine, Santa Ana, Orange, Whittier, Torrance, City of Industry, Fullerton, Garden Grove, Newport Beach, Lakewood, Laguna Beach, La Puente, Carson, Huntington Beach, Compton, El Monte, Buena Park, Pico Rivera, West Covina, San Juan Capistrano, Mission Viejo, San Pedro, Downey, Laguna Hills, Monterey Park, Costa Mesa, Westminster, La Mirada, Fountain Valley, Aliso Viejo, Gardena, La Habra, Tustin, Lake Forest, Bell Gardens, El Toro, Yorba Linda, Norwalk, Artesia, Rosemead, Inglewood, Brea, Lawndale, Bell, Bellflower, Redondo Beach, Palos Verdes Peninsula, Cerritos, Wilmington, Villa Park, Cypress, Placentia, Hawthorne, Diamond Bar, Santa Fe Springs, Walnut, Los Alamitos, Laguna Niguel, Paramount, Huntington Park, Lomita, Silverado, Seal Beach, Hacienda Heights, Pomona, Harbor City, Chino Hills, Lynwood, Foothill Ranch, Surfside, Midway City, Corona del Mar, Newport Coast, Sunset Beach, Ladera Ranch, East Irvine, South Gate, Hermosa Beach, South El Monte, Atwood, Trabuco Canyon, Dana Point, Rowland Heights, Rancho Santa Margarita, Maywood, Montebello, Rancho Palos Verdes, Stanton, Hawaiian Gardens, La Palma</p><button class='btn btn-link btn-more visible-xs ' type="button" name="button">More...</button>
-    </div>
-  </div>
 </div>

@@ -1,9 +1,23 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   root 'static_pages#home'
 
   # resources :contacts
   post '/contacts', to: 'contacts#create'
   get '/contacts', to: 'contacts#index'
+
+
+  # get '/signup', to: 'users#new'
+  # post '/users', to: 'users#create'
+
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'session#destroy'
+
+  post '/users', to: 'users#create'
+  # TODO delete resources users and only keep routes need for now
+  # resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

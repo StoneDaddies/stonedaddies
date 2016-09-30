@@ -2,7 +2,7 @@
   position: fixed;
   width: 100%;
   z-index: 20;
-  margin-bottom: 50px;  
+  margin-bottom: 50px;
   .navbar-header {
     a.navbar-brand {
       font-weight: 800;
@@ -22,6 +22,14 @@
       }
       @media(max-width: 767px){
         display: block;
+      }
+    }
+  }
+  .navbar-collapse {
+    @media(max-width: 767px){
+      text-align: center;
+      .dropdown-menu {
+        text-align: right;
       }
     }
   }
